@@ -1,6 +1,6 @@
 # Messaging REST API
 
-This is a REST API coded in Java for handling Users and Messages for a theroetical company. Requests can be sent using [Postman](https://www.postman.com/).
+This is a REST API coded in Java for handling Users and Messages for a theroetical company. Requests can be sent using [Postman](https://www.postman.com/). A JSON file of the below commands has been provided also.
 
 ## Usage
 - Create users:
