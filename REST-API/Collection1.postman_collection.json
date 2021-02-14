@@ -1,0 +1,435 @@
+{
+	"info": {
+		"_postman_id": "8621bd3a-f237-4045-b5d0-3b4ed489b621",
+		"name": "Collection1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "API-Examples-Users",
+			"item": [
+				{
+					"name": "http://localhost:8080/createUser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "emailAddress",
+								"value": "foo@gmail.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Foo Bar\",\n\t\"emailAddress\": \"foo@gmail.com\",\n\t\"location\": \"Dublin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/createUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"createUser"
+							]
+						},
+						"description": "#Body:\n{\n\t\"name\": \"Foo Bar\",\n\t\"emailAddress\": \"foo@gmail.com\",\n\t\"location\": \"Dublin\"\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/getUserDetails",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "emailAddress",
+								"value": "foo@gmail.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/getUserDetails",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getUserDetails"
+							]
+						},
+						"description": "#Headers:\nemailAddress foo@gmail.com"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/updateUser",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"emailAddress\": \"foo@gmail.com\",\r\n    \"name\": \"Foo Bar\",\r\n    \"location\": \"Galway\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/updateUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"updateUser"
+							]
+						},
+						"description": "#Body\r\n{\r\n    \"emailAddress\": \"foo@gmail.com\",\r\n    \"name\": \"Foo Bar\",\r\n    \"location\": \"Galway\"\r\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/deleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "emailAddress",
+								"value": "foo@gmail.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/deleteUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"deleteUser"
+							]
+						},
+						"description": "#Headers\nemailAddress : foo@gmail.com"
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "e2ab2338-68ae-46b6-8ae8-573d6f65efd1",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "f4e249f9-181c-425c-b318-5c49270f3f8b",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "API-Examples-Messages",
+			"item": [
+				{
+					"name": "http://localhost:8080/sendMessage",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"emailAddress1\" : \"foo@gmail.com\",\n\t\"emailAddress2\" : \"bar@gmail.con\",\n\t\"chatHistory\" :  \"Hello, I am having an issue with product X, could you help?\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/sendMessage",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sendMessage"
+							]
+						},
+						"description": "{\n\t\"emailAddress1\" : \"foo@gmail.com\",\n\t\"emailAddress2\" : \"bar@gmail.con\",\n\t\"chatHistory\" :  \"Hello, I am having an issue with product X, could you help?\"\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/updateChatHistory ",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "sender",
+								"value": "bar@gmail.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"emailAddress1\" : \"foo@gmail.com\",\n\t\"emailAddress2\" : \"bar@gmail.con\",\n\t\"chatHistory\" :  \"Sure! What seems to be the issue?\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/updateChatHistory",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"updateChatHistory"
+							]
+						},
+						"description": "#Header and Body needed:\n\n##Header: sender : bar@gmail.com\n\n##Body:\n{\n\t\"emailAddress1\" : \"foo@gmail.com\",\n\t\"emailAddress2\" : \"bar@gmail.con\",\n\t\"chatHistory\" :  \"Sure! What seems to be the issue?\"\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/editMessage",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "emailAddress",
+								"value": "foo@gmail.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/editMessage",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"editMessage"
+							]
+						},
+						"description": "#Headers\nemailAddress : foo@gmail.com"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/editMessage",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "emailAddress",
+								"value": "foo@gmail.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"emailAddress1\": \"foo@gmail.com\",\r\n    \"emailAddress2\": \"bar@gmail.con\",\r\n    \"chatHistory\": \"Hello, I am having an issue with product X, could you help?[bar@gmail.com]: Sure! What seems to be the problem?\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/editMessage",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"editMessage"
+							]
+						},
+						"description": "#Body\r\n{\r\n    \"emailAddress1\": \"foo@gmail.com\",\r\n    \"emailAddress2\": \"bar@gmail.con\",\r\n    \"chatHistory\": \"Hello, I am having an issue with product X, could you help?[bar@gmail.com]: Sure! What seems to be the issue?\"\r\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/getChatHistory",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "emailAddress",
+								"value": "foo@gmail.com",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/getChatHistory",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getChatHistory"
+							]
+						},
+						"description": "#Headers\nemailAddress : foo@gmail.com"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/deleteMessages",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "emailAddressToDelete",
+								"value": "foo@gmail.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/deleteMessages",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"deleteMessages"
+							]
+						},
+						"description": "#Headers\nemailAddressToDelete : foo@gmail.com"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
